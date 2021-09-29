@@ -71,7 +71,7 @@ resource "aws_instance" "vm_1" {
 }
 
 # lets use some "one-timey" "hand-wavey" magic to
-# copy over the index.html local file and use shell
+# copy over the setup.sh local file and use shell
 # to install some deps
 resource "null_resource" "configure-web-server" {
   triggers = {
