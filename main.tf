@@ -52,7 +52,7 @@ resource "aws_security_group" "demo_security_group" {
     ipv6_cidr_blocks = ["::/0"]
   }
   tags = {
-    name = "${var.prefix}-demo-web-server-security-group"
+    Name = "${var.prefix}-demo-web-server-security-group"
   }
 }
 
@@ -66,7 +66,7 @@ resource "aws_instance" "vm_1" {
   vpc_security_group_ids      = [aws_security_group.demo_security_group.id]
 
   tags = {
-    name = "${var.prefix}-demo-vm-1"
+    Name = "${var.prefix}-demo-vm-1"
   }
 }
 
